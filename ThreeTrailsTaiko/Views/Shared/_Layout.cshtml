@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Poiret+One|PT+Sans+Narrow:700|Noto+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
+
+	<meta charset="utf-8" />
+	<title></title>
+	@Styles.Render("~/Content/css")
+	@Scripts.Render("~/Content/js")
+
+</head>
+<body>
+
+	<header>
+		<img src="/Content/logo.png" alt="Three Trails Taiko logo" />
+		<h1>
+			Three Trails <br />Taiko
+		</h1>
+
+		<div class="mask"></div>
+
+		@SlideShowHelper.SlideShow("Header")
+
+
+	</header>
+
+@{
+	string currentController = ViewContext.RouteData.Values["controller"].ToString();
+	var navItems = new[] {"Home", "Performances", "About Us", "Photos", "Videos", "Resources" };
+}
+	<nav>
+		<ul>
+			@foreach(var navItem in navItems)
+			{
+				<li>
+					@Html.ActionLink(navItem, "", navItem.Replace(" ", ""), null, new { @class = currentController == navItem.Replace(" ", "") ? "selected" : ""})
+				</li>
+			}
+		</ul>
+	</nav>
+	
+	@*<nav>
+		<ul>
+			<li>
+				@Html.ActionLink("Home", "", "Home", new { @class = currentController == "Home" ? "selected" : "" })
+			</li>
+			<li>
+				@Html.ActionLink("Performances", "", "Performances")
+			</li>
+			<li>
+				@Html.ActionLink("About Us", "", "AboutUs")
+			</li>
+			<li>
+				@Html.ActionLink("Photos", "", "Photos")
+			</li>
+			<li>
+				@Html.ActionLink("Videos", "", "Videos")
+			</li>
+			<li>
+				@Html.ActionLink("Resources", "", "Resources")
+			</li>
+		</ul>
+	</nav>*@
+
+	<section id="mainBody">
+		@RenderBody()
+	</section>
+
+
+	<footer>
+		Copyright © 2011-2017 Three Trails Taiko
+	</footer>
+
+</body>
+</html>

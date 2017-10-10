@@ -1,0 +1,53 @@
+﻿<h2>
+	Photo Gallery
+</h2>
+
+<ul class="photo-gallery" id="mainGallery">
+	<li>
+		<img tabindex="0" src="/Gallery/image2.jpg" data-photo="/Gallery/image2.jpg" />
+	</li>
+	<li>
+		<img tabindex="0" src="/Gallery/image3.jpg" data-photo="/Gallery/image3.jpg" />
+	</li>
+	<li>
+		<img tabindex="0" src="/Gallery/image4.jpg" data-photo="/Gallery/image4.jpg" />
+	</li>
+	<li>
+		<img tabindex="0" src="/Gallery/image5.jpg" data-photo="/Gallery/image5.jpg" />
+	</li>
+	<li>
+		<img tabindex="0" src="/Gallery/image6.jpg" data-photo="/Gallery/image6.jpg" />
+	</li>
+	<li>
+		<img tabindex="0" src="/Gallery/image7.jpg" data-photo="/Gallery/image7.jpg" />
+	</li>
+	<li>
+		<img tabindex="0" src="/Gallery/image8.jpg" data-photo="/Gallery/image8.jpg" />
+	</li>
+</ul>
+
+<div id="photoModal" class="photo-modal">
+	<div class="mask"></div>
+	<div class="menu">
+		<div class="photo-navigation">
+			<div class="menu-item previous">&larr;</div>
+			<div>
+				<span class="current-photo-number"></span>
+				&nbsp;of&nbsp;
+				<span class="total-photos-count"></span>
+			</div>
+			<div class="menu-item next">&rarr;</div>
+		</div>
+		<div class="menu-item dismiss">&times;</div>
+	</div>
+	<div class="photo-modal-inner">
+		<div class="content">
+			<img />
+		</div>
+	</div>
+</div>
+
+
+<script>
+	PhotoGallery("mainGallery");
+</script>

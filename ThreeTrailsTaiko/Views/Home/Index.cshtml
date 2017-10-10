@@ -1,0 +1,35 @@
+﻿@{
+	var repository = ThreeTrailsTaiko.ApplicationCore.IoC.GetInstance<ThreeTrailsTaiko.Contracts.Repositories.IPerformanceRepository>();
+	var performances = repository.GetUpcomingPerformances(); ;
+
+	if (performances.Count > 0)
+	{
+		<h2>
+			Next Performance
+		</h2>
+
+		@PerformancesHelper.UpcomingPerformances(performances.Take(1).ToList())
+
+		<br />
+	}
+}
+
+
+
+<h2>
+	Three Trails Taiko
+</h2>
+<p>
+	We are a volunteer community group with a passion for taiko whether in the practice room or on stage. 
+	We have performed for the Greater Kansas City Japan Festival, the Independence Cherry Blossom Festival, and various Charity, Library, and Business Events. 
+	Please contact us via <script>doathing("email");</script> to schedule a performance.
+</p>
+
+<h2>
+	About Taiko
+</h2>
+<p>'Taiko' 太鼓 (Tie - koh) is the Japanese word for drum. Historically it was used for centuries as a part of Japanese culture. The taiko was used to determine village boundary lines (as far as the drum could be heard), in battle to intimidate the enemy and rally the warriors, and in the arts of Japanese culture as part of Kabuki Theatre. It also has a connection to religious and spiritual activities in Japan.</p>
+<p>Kumi-daiko (group drumming or performance taiko) is relatively new art that started after WWII in Japan by Daihachi Oguchi. It was brought to the United States by Grand Master Seiichi Tanaka, who started the San Francisco Taiko Dojo in 1968. Through his teachings and various workshops throughout the country taiko groups have spread across North America, now numbering over 200 groups nationwide.</p>
+<p>Three Trails Taiko started in the summer of 2010 from the collaboration of some passionate taiko players from Denver Taiko and Ki-Daiko and is currently operating as a community performance taiko group.</p>
+
+

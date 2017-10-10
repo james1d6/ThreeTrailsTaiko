@@ -1,0 +1,55 @@
+﻿@helper UpcomingPerformances(List<ThreeTrailsTaiko.Contracts.DataModels.IPerformance> performances = null)
+{
+if (performances == null)
+{
+	var repository = ThreeTrailsTaiko.ApplicationCore.IoC.GetInstance<ThreeTrailsTaiko.Contracts.Repositories.IPerformanceRepository>();
+	performances = repository.GetUpcomingPerformances(); ;
+}
+
+if (performances.Count > 0)
+{
+		<ul class="performance-list upcoming-performances">
+			@foreach (var item in performances)
+			{
+				<li>
+					<h3>
+						@item.StartDate.ToLongDateString() 
+						
+						@if (item.StartTime != TimeSpan.Zero)
+						{
+							<span>at @item.StartTime.ToString()</span>
+						}
+						
+					</h3>
+					<div>
+						<strong>
+							<a href="@item.EventUrl">
+								@item.EventName
+							</a>
+						</strong>
+					</div>
+					<div>
+						<div>
+							@item.Venue.Name
+						</div>
+						<div>
+							@item.Venue.Street
+						</div>
+						<div>
+							@item.Venue.City, @item.Venue.State &nbsp;&nbsp; @item.Venue.PostalCode
+						</div>
+					</div>
+					<div>
+						<a href="@item.Venue.MapUrl">Map</a>
+					</div>
+				</li>
+			}
+		</ul>
+	}
+	else
+	{
+		<div>
+			<em>Check back here and <a href="https://www.facebook.com/ThreeTrailsTaiko/">our Facebook Page</a> for performance updates.</em>
+		</div>
+	}
+}

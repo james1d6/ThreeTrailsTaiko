@@ -1,0 +1,44 @@
+﻿<h2>
+	Upcoming Performances
+</h2>
+<div>
+	@PerformancesHelper.UpcomingPerformances()
+</div>
+
+@{
+	var repository = ThreeTrailsTaiko.ApplicationCore.IoC.GetInstance<ThreeTrailsTaiko.Contracts.Repositories.IPerformanceRepository>();
+	var performances = repository.GetPastPerformances();
+
+	if (performances.Count > 0)
+	{
+		<br /><br />
+		<h2>
+			Past Performances
+		</h2>
+		<ul class="performance-list upcoming-performances">
+			@{ var year = 0;}
+			@foreach (var item in performances)
+			{
+				if (year != item.StartDate.Year)
+				{
+					year = item.StartDate.Year;
+					<li>
+						<h2>@year <hr /></h2>
+					</li>
+				}
+				<li>
+					<h3>
+						@item.StartDate.ToString("MMMM d")
+					</h3>
+					<div>
+						@item.EventName
+					</div>
+					<div>
+						<em>@item.Venue.Name</em>
+					</div>
+
+				</li>
+			}
+		</ul>
+	}
+}

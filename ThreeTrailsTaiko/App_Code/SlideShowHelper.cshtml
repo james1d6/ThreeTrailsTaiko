@@ -1,0 +1,17 @@
+﻿@helper SlideShow(string alias) {
+var repository = ThreeTrailsTaiko.ApplicationCore.IoC.GetInstance<ThreeTrailsTaiko.Contracts.Repositories.ISlideShowRepository>();
+var slideShow = repository.GetSlideShowByAlias(alias);
+	<ul class="slideshow">
+		@foreach(var slide in slideShow.Slides)
+		{
+			<li>
+				<img src="@slide.ImagePath" title="@slide.Caption" />
+			</li>
+		}
+	</ul>
+
+
+	<script>
+		window.addEventListener("load", slideShow);
+	</script>
+}
