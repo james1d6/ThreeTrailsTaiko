@@ -56,7 +56,7 @@
       <Project>{10a42ed3-c00b-4a08-adc2-d5ee54c591dd}</Project>
       <Name>DataModels</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Respositories\Repositories.csproj">
+    <ProjectReference Include="..\Repositories\Repositories.csproj">
       <Project>{dc9637de-43ed-4092-af20-aec3dd8cbb1c}</Project>
       <Name>Repositories</Name>
     </ProjectReference>

@@ -163,7 +163,9 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -203,7 +205,7 @@
       <Project>{10a42ed3-c00b-4a08-adc2-d5ee54c591dd}</Project>
       <Name>DataModels</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Respositories\Repositories.csproj">
+    <ProjectReference Include="..\Repositories\Repositories.csproj">
       <Project>{dc9637de-43ed-4092-af20-aec3dd8cbb1c}</Project>
       <Name>Repositories</Name>
     </ProjectReference>

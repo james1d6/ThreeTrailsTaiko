@@ -7,8 +7,8 @@
     <ProjectGuid>{DC9637DE-43ED-4092-AF20-AEC3DD8CBB1C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Respositories</RootNamespace>
-    <AssemblyName>Respositories</AssemblyName>
+    <RootNamespace>Repositories</RootNamespace>
+    <AssemblyName>Repositories</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
