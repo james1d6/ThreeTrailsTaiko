@@ -203,9 +203,9 @@
       <Project>{10a42ed3-c00b-4a08-adc2-d5ee54c591dd}</Project>
       <Name>DataModels</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Respositories\Respositories.csproj">
+    <ProjectReference Include="..\Respositories\Repositories.csproj">
       <Project>{dc9637de-43ed-4092-af20-aec3dd8cbb1c}</Project>
-      <Name>Respositories</Name>
+      <Name>Repositories</Name>
     </ProjectReference>
     <ProjectReference Include="..\SqlDataHelper\DataLayer.csproj">
       <Project>{50fc5b86-cad0-46c7-9f13-06b1151e53c7}</Project>

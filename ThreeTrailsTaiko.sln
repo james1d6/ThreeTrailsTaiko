@@ -14,7 +14,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Cont
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "SqlDataHelper\DataLayer.csproj", "{50FC5B86-CAD0-46C7-9F13-06B1151E53C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Respositories", "Respositories\Respositories.csproj", "{DC9637DE-43ED-4092-AF20-AEC3DD8CBB1C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositories", "Respositories\Repositories.csproj", "{DC9637DE-43ED-4092-AF20-AEC3DD8CBB1C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataModels", "DataModels\DataModels.csproj", "{10A42ED3-C00B-4A08-ADC2-D5EE54C591DD}"
 EndProject
